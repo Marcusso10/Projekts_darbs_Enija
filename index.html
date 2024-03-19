@@ -1,31 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Drum Kit</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Analyzer</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
 </head>
-
 <body>
-
-  <h1 id="title">Drum 🥁 Kit</h1>
-  <div class="set">
-    <button class="w drum pressed">w</button>
-    <button class="a drum pressed">a</button>
-    <button class="s drum pressed">s</button>
-    <button class="d drum pressed">d</button>
-    <button class="j drum pressed">j</button>
-    <button class="k drum pressed">k</button>
-    <button class="l drum pressed">l</button>
-  </div>
-
-
-  <footer>
-    Made with ❤️ in London.
-  </footer>
-  <script src="index.js"></script>
+  <header>
+    <h1>Color Analyzer</h1>
+  </header>
+  <main>
+    <section id="upload-section">
+      <h2>Upload Image</h2>
+      <input type="file" id="image-upload" accept="image/*">
+    </section>
+    <section id="color-analysis-section">
+      <h2>Color Analysis Result</h2>
+      <div id="color-result"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
 </body>
-
 </html>
