@@ -1,38 +1,38 @@
-document.getElementById('image-upload').addEventListener('change', function() {
-    const file = this.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = function() {
-        const img = new Image();
-        img.src = reader.result;
-        img.onload = function() {
-          const color = analyzeColor(img);
-          displayColor(color);
-        }
-      }
-      reader.readAsDataURL(file);
-    }
-  });
-  
-  function analyzeColor(img) {
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
-    canvas.width = img.width;
-    canvas.height = img.height;
-    ctx.drawImage(img, 0, 0);
-    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    const pixels = imageData.data;
+// let y = Math.floor(Math.random() * 10 + 1);
+ 
+// let guess = 1;
 
-    const color = {
-      red: pixels[0],
-      green: pixels[1],
-      blue: pixels[2]
-    };
+// document.getElementById("submitguess").onclick = function () {
+
+
+//     let x = document.getElementById("guessField").value;
+
+//     if (x == y) {
+//         alert("Malacis! Tu uzvarēji veicot "
+//             + guess + " minējumus ");
+//     }
+
+
+//     else if (x > y) {
+//         guess++;
+//         alert("Nepareizi! Skaitlis ir mazāks.");
+//     }
+//     else {
+//         guess++;
+//         alert("Nepareizi! Skaitlis ir lielāks.")
+//     }
+// }
+
+
+function calculateProteinIntake() {
+  var mass = parseFloat(document.getElementById('mass').value);
+  var age = parseInt(document.getElementById('age').value);
   
-    return color;
+  // Calculate protein intake based on mass and age
+  var proteinIntake = mass * 0.8; // Recommended protein intake per kg of body weight
+  if (age >= 30) {
+      proteinIntake += 5; // Additional protein intake for adults over 30
   }
   
-  function displayColor(color) {
-    const colorResultDiv = document.getElementById('color-result');
-    colorResultDiv.style.backgroundColor = `rgb(${color.red}, ${color.green}, ${color.blue})`;
-  }
+  document.getElementById('result').innerText = "Protein intake needed per day: " + proteinIntake.toFixed(2) + " grams";
+}

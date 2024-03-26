@@ -2,24 +2,111 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Color Analyzer</title>
+  <title>Mini skaitli</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
   <header>
-    <h1>Color Analyzer</h1>
   </header>
-  <main>
-    <section id="upload-section">
-      <h2>Upload Image</h2>
-      <input type="file" id="image-upload" accept="image/*">
-    </section>
-    <section id="color-analysis-section">
-      <h2>Color Analysis Result</h2>
-      <div id="color-result"></div>
-    </section>
-  </main>
+ 
+  <div class="b-example-divider"></div>
+ 
+  <div class="container">
+    <header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+      </ul>
+    </header>
+  </div>
+ 
+  <div class="b-example-divider"></div>
+ 
+  <div class="container px-4 py-5" id="featured-3">
+    <h2 class="pb-2 border-bottom">Olbaltumvielu plusi</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="feature col">
+        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+          <svg class="bi" width="1em" height="1em"><img src="atteli/12.-Snatch-Grip-High-Pull.webp";width="1em"; height="1em"></svg>
+        </div>
+        <h3 class="fs-2 text-body-emphasis">Palielina muskuļu masu</h3>
+        <p>Olbaltumvielas ir jūsu muskuļu pamatelements.
+          Tāpēc, ēdot pietiekamu daudzumu olbaltumvielu, jūs varat saglabāt muskuļu masu un veicināt muskuļu augšanu, kad veicat spēka treniņus.</p>
+      </div>
+      <div class="feature col">
+        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+          <svg class="bi" width="1em" height="1em"><use href="#people-circle"></use></svg>
+        </div>
+        <h3 class="fs-2 text-body-emphasis">Labi jūsu kauliem</h3>
+        <p>
+          Cilvēki, kuri ēd vairāk olbaltumvielu, novecojot mēdz labāk uzturēt kaulu masu un viņiem ir daudz mazāks osteoporozes un lūzumu risks 
+          Tas ir īpaši svarīgi sievietēm, kurām ir augsts osteoporozes risks pēc menopauzes.</p>
+      </div>
+      <div class="feature col">
+        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
+        </div>
+        <h3 class="fs-2 text-body-emphasis">Pazemina asinsspiedienu</h3>
+        <p>Augsts asinsspiediens ir galvenais sirdslēkmes, insultu un hronisku nieru slimību cēlonis.
+
+          Interesanti, ka ir pierādīts, ka lielāks olbaltumvielu patēriņš pazemina asinsspiedienu.</p>
+      </div>
+    </div>
+  </div>
+ 
+<div class="b-example-divider"></div>
+ 
+    <!-- <h1>Guess The Number</h1>
+    <p>
+        We have selected a random number
+        between 1 - 10. See if you can
+        guess it.
+    </p>
+ 
+    <div class="form">
+        <label for="guessField">
+            Enter a guess:
+        </label>
+         
+        <input type="text" id="guessField"
+            class="guessField">
+         
+        <input type="submit" value="Submit guess"
+            class="guessSubmit" id="submitguess">
+    </div> -->
+
+    <div class="white text-black text-secondary px-4 py-5 text-center">
+      <div class="py-5">
+        <div class="col-lg-6 mx-auto">
+          <p class="fs-5 mb-4"><h2>Cik gramus olbaltumvielas tev būtu jāuzņem dienā?</h2>
+
+            <div>
+              <label for="mass">Enter your mass (kg):</label>
+              <input type="number" id="mass" name="mass">
+            </div>
+            
+            <div>
+              <label for="age">Enter your age:</label>
+              <input type="number" id="age" name="age">
+            </div>
+            
+            <button onclick="calculateProteinIntake()">Submit</button>
+            
+            <div id="result"></div></p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button type="button" class="btn btn-outline-light btn-lg px-4">Secondary</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="script.js"></script>
 </body>
 </html>
