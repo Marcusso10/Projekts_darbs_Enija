@@ -24,15 +24,19 @@
 // }
 
 
+
+
 function calculateProteinIntake() {
-  var mass = parseFloat(document.getElementById('mass').value);
-  var age = parseInt(document.getElementById('age').value);
-  
-  // Calculate protein intake based on mass and age
-  var proteinIntake = mass * 0.8; // Recommended protein intake per kg of body weight
-  if (age >= 30) {
-      proteinIntake += 5; // Additional protein intake for adults over 30
+    var mass = parseFloat(document.getElementById('mass').value);
+    var age = parseInt(document.getElementById('age').value);
+    
+
+    let proteinIntake;
+    if (age >= 18) {
+       proteinIntake = mass * 1.4; 
+    } else {
+       proteinIntake = mass * 0.9; 
+    }
+    
+    document.getElementById('result').innerText = "Nepieciešamais olbaltumvielu daudzums dienā: " + proteinIntake.toFixed(2) + " grami";
   }
-  
-  document.getElementById('result').innerText = "Protein intake needed per day: " + proteinIntake.toFixed(2) + " grams";
-}
