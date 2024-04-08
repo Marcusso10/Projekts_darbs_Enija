@@ -12,15 +12,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Definē ēdienus un proteīnus
     const foods = {
-        "Pienā": 3.0,
-        "Vistas gaļā": 27.0,
-        "Olā": 13.0,
-        "Tofu": 8.0,
-        "Lasī": 20.0,
-        "Jogurtā": 10.0,
-        "Cūkgaļa": 27.0,
-        "Kalmārā":18.0,
-        "Krabja gaļā":19.0
+        "pienā": 3.0,
+        "vistas gaļā": 27.0,
+        "olā": 13.0,
+        "tofu": 8.0,
+        "lasī": 20.0,
+        "jogurtā": 10.0,
+        "cūkgaļa": 27.0,
+        "kalmārā":18.0,
+        "krabja gaļā":19.0
 
     };
 
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
         selectedFood = Object.keys(foods)[Math.floor(Math.random() * Object.keys(foods).length)];
         actualProtein = foods[selectedFood];
 
-        productInfo.textContent = `Spēle ir sākusies, centies uzvarēt spēli ar pēc iespējas mazāk mēģinājumiem. Jums vaig uzminēt proteīna daudzumu ${selectedFood} uz 100g.`;
+        productInfo.textContent = `Spēle ir sākusies, centies uzvarēt spēli ar pēc iespējas mazāk mēģinājumiem. Jums vajag uzminēt proteīna daudzumu ${selectedFood} uz 100g.`;
     });
 
     confirmBtn.addEventListener('click', function () {
